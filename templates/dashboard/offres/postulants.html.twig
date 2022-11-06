@@ -1,0 +1,57 @@
+
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block body %}
+
+         <div class=" page-content">
+            <div class="content-block">
+               <div class="container">
+                  <div class="row">
+                     <div class="job-bx job-profile  bg-white">
+                        <div class="job-bx-title clearfix">
+                           <h5 class=" font-weight-700 text-left text-primary">
+                           {{job.title}}/Postulants ({{job.applications|length}})</h5>
+                        </div>
+                        
+                             
+                                   {% for applications in job.applications %}
+                                      
+                                        <div class="">
+                           <div class="card-body p-0">
+                                        <div class=" d-flex float-start m-b10">
+                                            <div class=" avatar avatar-3xl">
+                                           
+                                                <a href="javascript:void(0);"><span>
+                              <img class="rounded-circle m-t5" style="background-image " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVsmsQZnenIKX-x181542ZNLakNQoqwjbhQ&usqp=CAU" >
+                              </span></a></div>
+                                          
+                                            <div class="m-l20 job-post-info m-t10">
+                                            
+                                                <h6><a href="{{path('candidatProfile',{'fname':applications.candidate.fname,'lname':applications.candidate.lname,'id':applications.candidate.id})}}">{{applications.candidate.fname}} {{applications.candidate.lname}}</a></h6>
+                                        
+                                                    <h6>{{applications.candidate.titre}}</h6>
+                                                
+
+                                                    <h6 class="text-secondary">{{applications.appdate|date("m/d/Y")}}</h6>
+                                                    </div>
+                                               
+                                            </div>
+                                        </div>
+                                    
+                                    </li> 
+                               
+                                <hr >
+                           
+                               {% endfor %} 
+                            
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+{% endblock %}

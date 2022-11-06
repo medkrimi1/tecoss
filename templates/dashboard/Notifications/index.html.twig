@@ -1,0 +1,44 @@
+
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block body %}
+
+         <div class=" page-content">
+            <div class="content-block">
+               <div class="container">
+                  <div class="row">
+                     <div class="job-bx job-profile  bg-white">
+                        <div class="job-bx-title clearfix">
+                           <h5 class="font-weight-700 float-start  text-primary">Notifications</h5>
+                        </div>
+                        <div class="">
+                           <div class="card-body p-0">
+                              <div class="table-responsive scrollbar">
+                                 <table class="table table-dashboard mb-0 table-borderless fs--1 border-200">
+                                    <thead class="bg-light">
+                                    </thead>
+                                    <tbody>
+                                       <tr class="border-bottom border-400">
+                                          <td>
+                                             <div class="d-flex align-items-center position-relative">
+                                                <div class="posted-info clearfix  ">
+                                                   <p class="m-tb0  float-start  "><span class=" text-dark  ">Nouvelle candidature pour </span> <a href="../?a=viewjob&jobid="><span class="text-secondary "></a></span><span class=" text-dark  "> par </span> <a  href="../?a=candidate&memberid=" class="text-bold"><span class=" text-primary"> Med krimi</a> </span></p>
+                                                </div>
+                                             </div>
+                                             <div class="m-tb0    ">12/12/12</div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block body %}
+    <div class=" page-wraper-glass">
+
+        <div class=" page-content">
+
+            <div class="content-block">
+
+
+                <div class="container">
+                    <div class="row">
+
+
+
+                        <div class="job-bx job-profile  bg-white">
+                            <div class="job-bx-title clearfix">
+                                <h5 class="font-weight-700 float-start  text-primary">Basic information</h5>
+
+
+                            </div>
+
+                            <form class="post-form-wrapper" action="app/update-profile.php" method="POST" autocomplete="off">
+                                <div class="row m-b30">
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="fs-0">Nom</div>
+                                            <input name="lname"  required type="text"  class="form-control" value="Firas" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <div class="fs-0">Prénom</div>
+                                            <input name="fname" type="text" required type="text" class="form-control" value="Makni" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+                                    <div class="col-lg-6 col-md-6">
+
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <div class="fs-0">Adresse e-mail:</div>
+                                        <input type="email" name="email" required class="form-control" value="firas@it-tecos.fr" placeholder="">
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <ul> </ul>
+
+
+
+                                <div class="text-center" >
+
+                                    <button type="submit" class="btn btn-primary rounded-pill ">mettre à jour</button> </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
